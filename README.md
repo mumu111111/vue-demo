@@ -1,30 +1,3 @@
-# demo111-vue
-
-## Project setup
-```
-yarn install
-```
-
-### Compiles and hot-reloads for development
-```
-yarn run serve
-```
-
-### Compiles and minifies for production
-```
-yarn run build
-```
-
-### Run your tests
-```
-yarn run test
-```
-
-### Lints and fixes files
-```
-yarn run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
 # vue-demo
+做的一个井字棋。主要以实现效果为主。
+大体回忆一下井字棋的玩法。　一共９格，两两对弈，分别为ｘ和 o，点击下棋， 最先实现斜连 直连的为胜。
