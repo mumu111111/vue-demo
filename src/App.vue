@@ -1,34 +1,54 @@
 <template>
-  <div id="app" @click ="x=true">
-    <template v-if="x">X</template>
-    <template v-else="x"></template>
-  </div>
+   <div class="wrapper">
+      {{n}}
+      <div class="row">
+        <Cell @click="xx" :n= "n"/>
+        <Cell @click="xx" :n= "n"/>
+        <Cell @click="xx" :n= "n"/>
+      </div>
+      <div class="row">
+        <Cell @click="xx" :n= "n"/>
+        <Cell @click="xx" :n= "n"/>
+        <Cell @click="xx" :n= "n"/>
+      </div>
+      <div class="row">
+        <Cell @click="xx" :n= "n"/>
+        <Cell @click="xx" :n= "n"/>
+        <Cell @click="xx" :n= "n"/>
+      </div>
+   </div>
+ 
+    
 </template>
 
 <script>
-
+import Cell from './Cell'
 
 export default {
   name: 'app',
   data(){
     return {
-       x: false
+       x: false,
+       n:　0
+    }
+  },
+  methods: {
+    xx(){
+      console.log('某个cell被电击了')
+      this.n += 1
     }
   },
   components: {
-
+      Cell
   }
 }
 </script>
 
 <style>
-#app {
-  border: 1px solid #000;
-  width: 100px;
-  height: 100px;
+.wrapper{
+  font-size: 60px;
+}
+.row{
   display: flex;
-  justify-content: center;
-  align-items: center;
-
 }
 </style>
