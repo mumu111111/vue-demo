@@ -1,6 +1,5 @@
 <template>
    <div class="wrapper">
-      {{n}}
       <div class="row">
         <Cell @click="xx(0, $event)" :n= "n"/>
         <Cell @click="xx(1, $event)" :n= "n"/>
@@ -16,8 +15,9 @@
         <Cell @click="xx(7, $event)" :n= "n"/>
         <Cell @click="xx(8, $event)" :n= "n"/>
       </div>
-      {{map}}
-      {{result}}
+      <div>
+        赢者为{{result}}
+      </div>
    </div>
  
     
@@ -33,7 +33,7 @@ export default {
       x: false,
       n: 0,
       map: [[null, null, null], [null, null, null], [null, null, null]],
-      result: false
+      result: ''
     };
   },
   methods: {
