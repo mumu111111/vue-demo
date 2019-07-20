@@ -6,26 +6,26 @@
 </template>
 
 <script>
-
-
 export default {
-  name: 'app',
-  props: ['n'],
-  data(){
+  name: "app",
+  props: ["n"],
+  data() {
     return {
-       x: false,
-       text: "",
-    
-    }
+      x: false,
+      text: ""
+    };
   },
   methods: {
-      onClickCell(){
-          this.x = true
-          this.$emit('click')
-          this.text = this.n%2 ==0 ? 'X' : 'O'
-}
+    onClickCell() {
+      if (this.text !== "") {
+        return;
+      }
+      this.x = true;
+      this.text = this.n % 2 == 0 ? "X" : "O";
+      this.$emit("click", this.text);
+    }
   }
-}
+};
 </script>
 
 <style>
@@ -36,6 +36,5 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 </style>
